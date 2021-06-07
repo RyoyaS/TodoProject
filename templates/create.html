@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block header%}
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">TodoList</span>
+    </div>
+</nav>
+{%endblock header%}
+
+{%block content%}
+<form action="" method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="create">
+</form>
+{%endblock content%}
